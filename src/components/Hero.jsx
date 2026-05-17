@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="hero__image-card">
             <img
               src="/images/richard-morgan.png"
-              alt="Richard Morgan, senior franchise consultant, standing on a balcony in professional attire"
+              alt="Richard Morgin, senior franchise consultant, standing on a balcony in professional attire"
               className="hero__image"
               width={640}
               height={800}
