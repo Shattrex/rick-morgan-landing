@@ -231,6 +231,25 @@ ol {
   color: var(--charcoal-soft);
 }
 
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__nav-link {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  transition: color 0.2s ease;
+}
+
+.header__nav-link:hover {
+  color: var(--navy);
+}
+
 /* Hero */
 .hero {
   padding: clamp(2.5rem, 5vw, 4rem) 1.5rem clamp(4rem, 8vw, 6rem);

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CalendlyButton from './CalendlyButton';
 
 export default function Header() {
@@ -8,9 +9,14 @@ export default function Header() {
           <span className="header__name">Richard Morgin</span>
           <span className="header__role">Senior Franchise Consultant</span>
         </a>
-        <CalendlyButton variant="header" className="header__cta">
-          Talk With Richard
-        </CalendlyButton>
+        <nav className="header__nav" aria-label="Site navigation">
+          <Link to="/insights" className="header__nav-link">
+            Insights
+          </Link>
+          <CalendlyButton variant="header" className="header__cta">
+            Talk With Richard
+          </CalendlyButton>
+        </nav>
       </div>
     </header>
   );
