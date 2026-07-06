@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import TrustIntro from '../components/TrustIntro';
@@ -63,6 +64,21 @@ export default function HomePage() {
         <Quote />
         <WhoHelps />
         <Process />
+        <section className="insights-teaser section" aria-labelledby="insights-teaser-heading">
+          <div className="section__inner insights-teaser__inner">
+            <p className="insights-teaser__label reveal">Franchise Insights</p>
+            <h2 id="insights-teaser-heading" className="insights-teaser__title reveal reveal--delay-1">
+              Perspectives on Franchise Ownership
+            </h2>
+            <p className="insights-teaser__body reveal reveal--delay-2">
+              Thoughtful articles on evaluating franchises, understanding investment requirements,
+              and making decisions with clarity and confidence.
+            </p>
+            <Link to="/insights" className="insights-teaser__link reveal reveal--delay-3">
+              Read the Insights
+            </Link>
+          </div>
+        </section>
         <FAQ />
         <CTA />
       </main>
