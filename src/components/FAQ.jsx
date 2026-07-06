@@ -66,7 +66,7 @@ export default function FAQ() {
             return (
               <div
                 key={item.q}
-                className={`faq__item reveal reveal--delay-${(i % 3) + 1}${isOpen ? ' faq__item--open' : ''}`}
+                className={`faq__item${isOpen ? ' faq__item--open' : ''}`}
               >
                 <dt>
                   <button
@@ -87,7 +87,7 @@ export default function FAQ() {
                   role="region"
                   aria-labelledby={`faq-question-${i}`}
                   className="faq__answer"
-                  hidden={!isOpen}
+                  aria-hidden={!isOpen}
                 >
                   <p>{item.a}</p>
                 </dd>

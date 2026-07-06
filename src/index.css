@@ -805,6 +805,19 @@ ol {
 }
 
 .faq__answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  transition:
+    max-height 0.38s ease,
+    opacity 0.28s ease,
+    padding-bottom 0.38s ease;
+}
+
+.faq__item--open .faq__answer {
+  max-height: 20rem;
+  opacity: 1;
   padding-bottom: 1.4rem;
 }
 
