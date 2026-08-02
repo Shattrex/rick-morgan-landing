@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#presentation-root {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#presentation-root *,
+#presentation-root *::before,
+#presentation-root *::after {
+  box-sizing: border-box;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-slide {
+    page-break-after: always;
+    min-height: 100vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #presentation-root *,
+  #presentation-root *::before,
+  #presentation-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
