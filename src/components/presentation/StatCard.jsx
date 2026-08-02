@@ -1,19 +1,17 @@
 import { motion } from 'framer-motion';
-import * as LucideIcons from 'lucide-react';
+import { Users, AlertTriangle, Calendar, Building2, Star } from 'lucide-react';
 import AnimatedCounter from './AnimatedCounter';
 
-export default function StatCard({ stat, index }) {
-  const Icon = LucideIcons[stat.icon.charAt(0).toUpperCase() + stat.icon.slice(1).replace(/-([a-z])/g, (_, c) => c.toUpperCase())]
-    || LucideIcons.Circle;
+const iconMap = {
+  users: Users,
+  alert: AlertTriangle,
+  calendar: Calendar,
+  building: Building2,
+  star: Star,
+};
 
-  const iconMap = {
-    users: LucideIcons.Users,
-    alert: LucideIcons.AlertTriangle,
-    calendar: LucideIcons.Calendar,
-    building: LucideIcons.Building2,
-    star: LucideIcons.Star,
-  };
-  const ResolvedIcon = iconMap[stat.icon] || Icon;
+export default function StatCard({ stat, index }) {
+  const ResolvedIcon = iconMap[stat.icon] || Users;
 
   return (
     <motion.div
