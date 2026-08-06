@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import InsightsPage from './pages/InsightsPage';
 import ArticlePage from './pages/ArticlePage';
 import PresentationPage from './pages/PresentationPage';
+import DigitalTwinPage from './pages/DigitalTwinPage';
 import './index.css';
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/presentation" element={<PresentationPage />} />
+      <Route path="/digital-twin" element={<DigitalTwinPage />} />
       <Route path="/insights" element={<InsightsPage />} />
       <Route
         path="/insights/how-to-choose-the-right-franchise"
